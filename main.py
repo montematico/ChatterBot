@@ -29,7 +29,7 @@ chatbot = ChatBot(
 trainer = ChatterBotCorpusTrainer(chatbot)
 
 trainer.train('chatterbot.corpus.english')
-
+#adding an arbritary comment
 
 @client.event
 async def on_ready():
