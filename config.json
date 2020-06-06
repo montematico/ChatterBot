@@ -7,6 +7,7 @@
   "prefix": [
     "^"
   ],
+  "channel":"daryylsvoice",
   "name":"Daryyl",
   "playing": "games!",
   "playing_type": "playing|watching|listening",
