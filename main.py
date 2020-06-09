@@ -5,6 +5,7 @@ import logging
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
 
+loadtime = time.time()
 #Should get rid of some annoying errors (by ignoring them)
 logger = logging.getLogger() 
 logger.setLevel(logging.CRITICAL)
@@ -15,18 +16,18 @@ with open('config.json', 'r') as myfile:
     data=myfile.read()
 # parse file
 config = json.loads(data)
-
-loadtime = time.time()
 client = discord.Client()
 chatbot = ChatBot(
     config["name"],
-    storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
+    storage_adapter='chatterbot.storage.SQLStorageAdapter',
+    #storage_adapter="chatterbot.storage.MongoDatabaseAdapter",
     logic_adapters=[
         'chatterbot.logic.MathematicalEvaluation',
         'chatterbot.logic.TimeLogicAdapter',
         'chatterbot.logic.BestMatch'
     ],
-    database_uri='mongodb://localhost:27017/chatterbot-database'
+    #database_uri='mongodb://localhost:27017/chatterbot-database'
+    database_uri='sqlite:///database.db'
 )
 
 trainer = ChatterBotCorpusTrainer(chatbot)
