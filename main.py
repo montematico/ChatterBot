@@ -62,4 +62,8 @@ async def on_message(message):
         if False: #set this to true to make it respond to messages in all channels
             message.channel.send(response) #I cannot stress how bad of an idea this is. Not only will you melt whatever's running this you will also most likely piss off everyone in the server since every message is responded to.
 
+async def input("") == "exit()":
+    sys.exit();
+
 client.run(config["token"]) #it's the token used to login I don't know what you want.
+#Dont Accidently Dox your bot twice by uploading the token to github.
