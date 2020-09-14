@@ -4,14 +4,14 @@ import json
 import logging
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
-
-logger = logging.getLogger() 
-logger.setLevel(logging.CRITICAL)
+print("test")
 # read file
 with open('config.json', 'r') as myfile:
     data=myfile.read()
 # parse file
 config = json.loads(data)
+
+print(config["name"] + "Starting V" + config["version"])
 
 loadtime = time.time()
 client = discord.Client()
