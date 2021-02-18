@@ -1,0 +1,15 @@
+{
+    "token": "No sir, this here token is protected and I will not dox myself again",
+    "join_message": "I has joined to do stuff 🌟",
+    "owners": [
+      244553922583199745
+    ],
+    "prefix": [
+      "^"
+    ],
+    "name":"Daryyl",
+    "playing": "games!",
+    "playing_type": "playing|watching|listening",
+    "status_type": "online|idle|dnd",
+    "version": "2.0.1"
+  }
